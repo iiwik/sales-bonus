@@ -72,7 +72,7 @@ function analyzeSalesData(data, options) {
     data.products.forEach(p => productIndex[p.sku] = p);
 
     // @TODO: Расчёт выручки и прибыли для каждого продавца
-    data.purchase_records.forEach(record => {
+        data.purchase_records.forEach(record => {
         const seller = sellerIndex[record.seller_id];
         if (!seller) return;
 
@@ -93,6 +93,7 @@ function analyzeSalesData(data, options) {
 
         seller.sales_count += 1;
     });
+
 
 
     // @TODO: Сортировка продавцов по прибыли
